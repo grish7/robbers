@@ -1,0 +1,304 @@
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+}
+
+ body{
+  height: 100%;
+  overflow: hidden;
+  counter-reset: catch;
+  position: relative;  
+  background-image: url(img/здание-банка-на-иллюстрации-фона-d-домов-и-улиц-маленького-городка-небо-196013836.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: 0 bottom;
+  color: rgb(10, 6, 238);
+  
+}
+
+input:checked{
+  counter-increment:catch;
+}
+
+input:checked + label{
+  display: none;
+}
+
+.result{  
+  width: 130px;
+  background-color: rgb(133, 182, 221);
+  box-shadow: rgb(90, 110, 139) 1px 2px 2px;
+  position: absolute;
+  top: 20px;
+  right: 10%; 
+  transform: translateX(-50%);
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: rgb(2, 16, 61) 2px 2px 3px;
+} 
+
+
+.result img{
+  width: 50px;
+  height: 50px;
+}
+.result::after{
+  content:counter(catch);
+}
+
+
+
+.robber{
+  width: 150px;
+  height: 150px;
+  /* outline: 1px solid red;  */
+  position: relative;
+  overflow: hidden;  
+  top: 20%;
+  left: -200%;
+} 
+
+.robber label{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/robber6.png);
+  cursor: url(img/icons8-наручники-32.png),crosshair;
+}
+
+
+
+.robber input{ 
+  position: absolute; 
+  left: -200%;
+}
+
+.robber1{
+  position: absolute; 
+  bottom: 60%;
+  animation: run1 10s 1; 
+  animation-delay:1s;  
+  transform: rotateY(180deg); 
+} 
+
+.robber2{
+  position: absolute;
+  bottom:60%; 
+  animation: run2 20s 3;
+  animation-delay: 2s;
+  
+}
+
+.robber3{
+  position: absolute;
+  top: 60%;  
+  animation: run3 20s 3;
+  animation-delay:2s;
+  
+}
+.robber4{
+  position: absolute;
+  top: 80%;  
+  animation: run4 20s 3;
+  animation-delay:2s; 
+  transform: rotateY(180deg);
+}
+.robber5{
+  position: absolute;
+  top: 70%;  
+  animation: run3 20s 3;
+  animation-delay:1.5s; 
+  transform: rotateY(180deg);
+} 
+ 
+.robber6{
+  position: absolute;
+  top: 70%;  
+  animation: run2 20s 3;
+  animation-delay:2.5s; 
+  transform: rotateY(180deg);
+}  
+
+.robber7{
+  position: absolute;
+  top: 65%;  
+  animation: run4 20s 3;
+  animation-delay:2.5s; 
+  transform: rotateY(180deg);
+}  
+
+.robber8{
+  position: absolute;
+  top: 80%;  
+  animation: run1 10s 3;
+  animation-delay:2.5s;
+  
+}  
+
+.robber9{
+  position: absolute;
+  top: 70%;  
+  animation: run5 10s 3;
+  animation-delay:2.5s; 
+  
+}  
+
+
+@keyframes run1{
+  0%{
+    top: 60%;
+    left: -50%;
+    
+  }
+
+  25%{
+    top: 70%;
+    left: 10%;
+  }
+
+  50%{
+    top: 70%;
+    left: 85%;
+    /* transform: rotateZ(-180deg); */
+    
+    
+  }
+
+  75%{
+    top: 70%;
+    left: 25%;
+    
+  }
+
+  100%{
+    top: 70%;
+    left: 180%;
+  }
+}  
+
+@keyframes run2{
+  0%{
+    top: 80%;
+    left: -50%;
+  }
+
+  25%{
+    top: 80%;
+    left: 60%;
+  }
+
+  50%{
+    top: 80%;
+    left: 15%;
+    
+  }
+
+  75%{
+    top: 80%;
+    left: 95%;
+    
+  }
+
+  100%{
+    top: 80%;
+    left: 180%;
+  }
+}  
+
+@keyframes run3{
+  0%{
+    top: 80%;
+    left: -50%;
+  }
+
+  25%{
+    top: 80%;
+    left: 80%;
+  }
+
+  50%{
+    top: 80%;
+    left: 25%;
+    
+  }
+
+  75%{
+    top: 80%;
+    left: 15%;
+    
+  }
+
+  100%{
+    top: 80%;
+    left: -180%;
+  }
+}  
+
+
+@keyframes run4{
+  0%{
+    top: 60%;
+    left: -50%;
+  }
+
+  25%{
+    top: 70%;
+    left: 20%;
+  }
+
+  50%{
+    top: 70%;
+    left: 85%;
+    
+  }
+
+  75%{
+    top: 80%;
+    left: 5%;
+    
+  }
+
+  100%{
+    top: 80%;
+    left: 180%;
+  }
+}  
+
+
+@keyframes run5{
+  0%{
+    top: 70%;
+    left: -50%;
+  }
+
+  25%{
+    top: 70%;
+    left: 80%;
+  }
+
+  50%{
+    top: 70%;
+    left: 15%;
+    
+  }
+
+  75%{
+    top: 70%;
+    left: 55%;
+    
+  }
+
+  100%{
+    top: 70%;
+    left: 180%;
+  }
+}  
